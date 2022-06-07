@@ -13,7 +13,6 @@
     "validate": "npm run lint && npm run format && npm run test:cov && npm run test:mutation"
   },
   "author": "Nicolas Sicard",
-  "license": "GPLv3+",
   "devDependencies": {
     "@stryker-mutator/core": "^6.0.2",
     "@stryker-mutator/jest-runner": "^6.0.2",
