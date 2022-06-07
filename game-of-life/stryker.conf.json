@@ -1,10 +1,13 @@
 {
-  "mutator": "typescript",
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
   "packageManager": "npm",
   "reporters": ["html", "clear-text", "progress"],
   "testRunner": "jest",
-  "transpilers": ["typescript"],
   "coverageAnalysis": "off",
+  "mutate": ["src/**/*.ts", "!src/**/*.spec.ts"],
+  "checkers": ["typescript"],
   "tsconfigFile": "tsconfig.json",
-  "mutate": ["src/**/*.ts"]
+  "ignorePatterns": ["build", "coverage"],
+  "thresholds": { "high": 100, "low": 99, "break": 100 },
+  "buildCommand": "npm run build"
 }
