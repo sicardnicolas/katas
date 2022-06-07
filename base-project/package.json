@@ -1,9 +1,10 @@
 {
-  "name": "game-of-life",
+  "name": "base-project",
   "version": "1.0.0",
-  "description": "Game of life kata",
+  "description": "base project kata",
   "main": "build/index.js",
   "scripts": {
+    "build": "tsc",
     "test": "jest ./src",
     "test:cov": "jest ./src --coverage",
     "test:mutation": "stryker run",
@@ -14,17 +15,20 @@
   },
   "author": "Nicolas Sicard",
   "devDependencies": {
-    "@stryker-mutator/core": "^6.0.2",
-    "@stryker-mutator/jest-runner": "^6.0.2",
-    "@stryker-mutator/typescript": "^4.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.27.1",
-    "@typescript-eslint/parser": "^5.27.1",
-    "eslint": "^8.17.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@stryker-mutator/core": "6.0.2",
+    "@stryker-mutator/jest-runner": "6.0.2",
+    "@stryker-mutator/typescript": "4.0.0",
+    "@stryker-mutator/typescript-checker": "6.0.2",
+    "@types/jest": "28.1.1",
+    "@typescript-eslint/eslint-plugin": "5.27.1",
+    "@typescript-eslint/parser": "5.27.1",
+    "eslint": "8.17.0",
+    "eslint-config-prettier": "8.5.0",
     "jest": "28.1.1",
     "prettier": "2.6.2",
-    "stryker-api": "^0.24.1",
-    "stryker-html-reporter": "^0.18.1",
+    "stryker-api": "0.24.1",
+    "stryker-html-reporter": "0.18.1",
+    "ts-jest": "28.0.4",
     "typescript": "4.7.3"
   },
   "jest": {
@@ -40,6 +44,8 @@
       "json",
       "js"
     ],
-    "resetMocks": true
+    "preset": "ts-jest",
+    "resetMocks": true,
+    "testEnvironment": "node"
   }
 }
